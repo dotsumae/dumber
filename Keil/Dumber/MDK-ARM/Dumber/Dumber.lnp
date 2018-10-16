@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"dumber\startup_stm32f103x6.o"
+"dumber\main.o"
+"dumber\stm32f1xx_it.o"
+"dumber\stm32f1xx_hal_msp.o"
+"dumber\stm32f1xx_hal_gpio_ex.o"
+"dumber\stm32f1xx_hal_tim.o"
+"dumber\stm32f1xx_hal_tim_ex.o"
+"dumber\stm32f1xx_hal.o"
+"dumber\stm32f1xx_hal_rcc.o"
+"dumber\stm32f1xx_hal_rcc_ex.o"
+"dumber\stm32f1xx_hal_gpio.o"
+"dumber\stm32f1xx_hal_dma.o"
+"dumber\stm32f1xx_hal_cortex.o"
+"dumber\stm32f1xx_hal_pwr.o"
+"dumber\stm32f1xx_hal_flash.o"
+"dumber\stm32f1xx_hal_flash_ex.o"
+"dumber\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "Dumber\Dumber.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Dumber.map" -o Dumber\Dumber.axf
