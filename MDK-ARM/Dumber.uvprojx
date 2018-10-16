@@ -112,11 +112,11 @@
           <SimDllName>SARMCM3.DLL</SimDllName>
           <SimDllArguments>-REMAP</SimDllArguments>
           <SimDlgDll>DARMSTM.DLL</SimDlgDll>
-          <SimDlgDllArguments>-pSTM32F103C6T6</SimDlgDllArguments>
+          <SimDlgDllArguments>-pSTM32F103C6</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
           <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>DARMSTM.DLL</TargetDlgDll>
-          <TargetDlgDllArguments>-pSTM32F103C6T6</TargetDlgDllArguments>
+          <TargetDlgDllArguments>-pSTM32F103C6</TargetDlgDllArguments>
         </DllOption>
         <DebugOption>
           <OPTHX>
