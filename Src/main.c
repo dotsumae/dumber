@@ -110,10 +110,12 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-		GPIOB->ODR |= (1<<0);
-		HAL_Delay(1000);
-		GPIOB->ODR &= ~(1<<0);
-		HAL_Delay(5000);
+//		GPIOB->ODR |= (1<<0);
+//		HAL_Delay(1000);
+//		GPIOB->ODR &= ~(1<<0);
+//		HAL_Delay(5000);
+		GPIOB->ODR |= (1<<12);
+		GPIOB->ODR |= (1<<13);
   }
   /* USER CODE END 3 */
 
