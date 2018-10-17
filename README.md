@@ -9,3 +9,6 @@ Ensuite, dans les réglages du debuger, choisir 'debug under Reset', et 'HW RESE
 
 # Abstract
 Ce projet est développé en C sur Keil (base de projet CubeMX).  
+
+# Liens utiles 
+Pour la PWM : https://www.waveshare.com/wiki/STM32CubeMX_Tutorial_Series:_PWM
