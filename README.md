@@ -12,3 +12,6 @@ Ce projet est développé en C sur Keil (base de projet CubeMX).
 
 # Liens utiles 
 Pour la PWM : https://www.waveshare.com/wiki/STM32CubeMX_Tutorial_Series:_PWM
+
+# Trucs Nuls
+Quand on compile de CubeMX vers Keil, on perd la config du mode debug 
