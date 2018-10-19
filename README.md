@@ -3,7 +3,7 @@ Projet de TP à l'INSA. Dumber est un petit robot qui ne peut que se déplacer.
 
 
 # Configuration de Keil
-Dans 'Options for target, entrer 'DARMSTM.DLL' avec les paramètres '-p STM32F103CP' dans Dialog DLL. 
+Dans 'Options for target, entrer 'DARMSTM.DLL' avec les paramètres '-pSTM32F103C6' dans Dialog DLL. 
 Ensuite, dans les réglages du debuger, choisir 'debug under Reset', et 'HW RESET'.
 
 
