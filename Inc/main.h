@@ -49,6 +49,23 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define PWM_Droit_Pin GPIO_PIN_1
+#define PWM_Droit_GPIO_Port GPIOA
+#define PWM_Gauche_Pin GPIO_PIN_2
+#define PWM_Gauche_GPIO_Port GPIOA
+#define LED_Red_Pin GPIO_PIN_0
+#define LED_Red_GPIO_Port GPIOB
+#define LED_Verte_Pin GPIO_PIN_1
+#define LED_Verte_GPIO_Port GPIOB
+#define CMD_Gauche_A_Pin GPIO_PIN_12
+#define CMD_Gauche_A_GPIO_Port GPIOB
+#define CMD_Gauche_B_Pin GPIO_PIN_13
+#define CMD_Gauche_B_GPIO_Port GPIOB
+#define CMD_Droit_A_Pin GPIO_PIN_14
+#define CMD_Droit_A_GPIO_Port GPIOB
+#define CMD_Droit_B_Pin GPIO_PIN_15
+#define CMD_Droit_B_GPIO_Port GPIOB
+
 /* ########################## Assert Selection ############################## */
 /**
   * @brief Uncomment the line below to expanse the "assert_param" macro in the 
