@@ -13,5 +13,8 @@ Ce projet est développé en C sur Keil (base de projet CubeMX).
 # Liens utiles 
 Pour la PWM : https://www.waveshare.com/wiki/STM32CubeMX_Tutorial_Series:_PWM
 
+# Infos utiles
+Pour les encodeurs: on peut utiliser directement le mode encodeur des timers. (combined channel: encoder mode dans CubeMx)
+
 # Trucs Nuls
-Quand on compile de CubeMX vers Keil, on perd la config du mode debug 
+Quand on compile de CubeMX vers Keil, on perd la config du mode debug Simu
