@@ -66,6 +66,73 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* USER CODE BEGIN 0 */
 
+void OnLEDVerte(void)
+{
+	GPIOB->ODR |= (1<<1);
+	GPIOB->ODR &= ~(1<<0);
+}
+
+void OnLEDRouge(void)
+{
+	GPIOB->ODR |= (1<<0);
+	GPIOB->ODR &= ~(1<<1);
+}
+
+void OnLEDOrange(void)
+{
+	GPIOB->ODR |= (1<<1);
+	GPIOB->ODR |= (1<<0);
+}
+
+void Avancer(void)
+{
+		OnLEDVerte();
+		/* Faire tourner la roue gauche */
+		GPIOB->ODR |= (1<<12);
+		GPIOB->ODR &= ~(1<<13);
+		
+		/* Faire tourner la roue droite */
+		GPIOB->ODR |= (1<<15);
+		GPIOB->ODR &= ~(1<<14);
+}
+
+void Reculer(void)
+{
+		OnLEDRouge();
+		/* Faire tourner la roue gauche */
+		GPIOB->ODR |= (1<<13);
+		GPIOB->ODR &= ~(1<<12);
+		
+		/* Faire tourner la roue droite */
+		GPIOB->ODR |= (1<<14);
+		GPIOB->ODR &= ~(1<<15);
+}
+
+void TournerD(void)
+{
+		OnLEDOrange();
+		/* Faire tourner la roue gauche */
+		GPIOB->ODR |= (1<<12);
+		GPIOB->ODR &= ~(1<<13);
+
+		/* Faire tourner la roue droite */
+		GPIOB->ODR |= (1<<14);
+		GPIOB->ODR &= ~(1<<15);
+}	
+
+void TournerG(void)
+{
+		OnLEDOrange();	
+		/* Faire tourner la roue gauche */
+		GPIOB->ODR |= (1<<13);
+		GPIOB->ODR &= ~(1<<12);
+
+		/* Faire tourner la roue droite */
+		GPIOB->ODR |= (1<<15);
+		GPIOB->ODR &= ~(1<<14);
+
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -111,21 +178,16 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-		GPIOB->ODR |= (1<<0);
-//  GPIOB->ODR |= (1<<1);  // LA LED VERTE NE MARCHE PAS
-//		HAL_Delay(1000);
-//		GPIOB->ODR &= ~(1<<0);
-//		HAL_Delay(5000);
+				
+		Avancer();
+		HAL_Delay(2000);
+		TournerD();
+		HAL_Delay(300);
+		Reculer();
+		HAL_Delay(1000);
+		TournerG();
+		HAL_Delay(300);
 		
-		/* Faire tourner la roue gauche */
-		GPIOB->ODR |= (1<<12);
-		GPIOB->ODR &= ~(1<<13);
-		//GPIOA->ODR |= (1<<2);
-		
-		/* Faire tourner la roue droite */
-		GPIOB->ODR |= (1<<15);
-		GPIOB->ODR &= ~(1<<14);
-		//GPIOA->ODR |= (1<<1);
   }
   /* USER CODE END 3 */
 
@@ -238,23 +300,17 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LED_Red_Pin|CMD_Gauche_A_Pin|CMD_Gauche_B_Pin|CMD_Droit_A_Pin 
-                          |CMD_Droit_B_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, LED_Red_Pin|LED_Verte_Pin|CMD_Gauche_A_Pin|CMD_Gauche_B_Pin 
+                          |CMD_Droit_A_Pin|CMD_Droit_B_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : LED_Red_Pin CMD_Gauche_A_Pin CMD_Gauche_B_Pin CMD_Droit_A_Pin 
-                           CMD_Droit_B_Pin */
-  GPIO_InitStruct.Pin = LED_Red_Pin|CMD_Gauche_A_Pin|CMD_Gauche_B_Pin|CMD_Droit_A_Pin 
-                          |CMD_Droit_B_Pin;
+  /*Configure GPIO pins : LED_Red_Pin LED_Verte_Pin CMD_Gauche_A_Pin CMD_Gauche_B_Pin 
+                           CMD_Droit_A_Pin CMD_Droit_B_Pin */
+  GPIO_InitStruct.Pin = LED_Red_Pin|LED_Verte_Pin|CMD_Gauche_A_Pin|CMD_Gauche_B_Pin 
+                          |CMD_Droit_A_Pin|CMD_Droit_B_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : LED_Verte_Pin */
-  GPIO_InitStruct.Pin = LED_Verte_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(LED_Verte_GPIO_Port, &GPIO_InitStruct);
 
 }
 
