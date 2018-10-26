@@ -179,8 +179,15 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-				
-		Avancer();
+		while(LireEtat() < 50)
+		{
+			Avancer();
+			HAL_Delay(1);
+		}
+					Reculer();
+
+		
+		/*Avancer(); //deplacement en bo
 		HAL_Delay(1500);
 		TournerD();
 		HAL_Delay(500);
@@ -188,6 +195,7 @@ int main(void)
 		HAL_Delay(1500);
 		TournerG();
 		HAL_Delay(500);
+		*/
 		
   }
   /* USER CODE END 3 */
