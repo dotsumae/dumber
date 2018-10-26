@@ -3,6 +3,7 @@
 "dumber\main.o"
 "dumber\stm32f1xx_it.o"
 "dumber\stm32f1xx_hal_msp.o"
+"dumber\deplacement.o"
 "dumber\stm32f1xx_hal_gpio_ex.o"
 "dumber\stm32f1xx_hal_tim.o"
 "dumber\stm32f1xx_hal_tim_ex.o"

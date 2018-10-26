@@ -65,6 +65,12 @@
 #define CMD_Droit_A_GPIO_Port GPIOB
 #define CMD_Droit_B_Pin GPIO_PIN_15
 #define CMD_Droit_B_GPIO_Port GPIOB
+#define Encodeur_gauche_A_Pin GPIO_PIN_8
+#define Encodeur_gauche_A_GPIO_Port GPIOA
+#define Encodeur_gauche_A_EXTI_IRQn EXTI9_5_IRQn
+#define Encodeur_droit_A_Pin GPIO_PIN_10
+#define Encodeur_droit_A_GPIO_Port GPIOA
+#define Encodeur_droit_A_EXTI_IRQn EXTI15_10_IRQn
 
 /* ########################## Assert Selection ############################## */
 /**

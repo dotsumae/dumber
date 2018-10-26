@@ -26,3 +26,4 @@ dumber\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 dumber\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 dumber\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 dumber\stm32f1xx_it.o: ../Inc/stm32f1xx_it.h
+dumber\stm32f1xx_it.o: ../Src/deplacement.h
