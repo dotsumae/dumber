@@ -1,7 +1,7 @@
 #include "deplacement.h"
 
-int TicksGauche; 
-int TicksDroite;
+int TicksGauche = 0; 
+int TicksDroite = 0;
 
 void ModifierTicksGauche(int increment) {
 	TicksGauche += increment;

@@ -168,7 +168,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
 	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_3);
-  /* USER CODE END 2 */
+	GPIOA -> ODR |= 0x1 << 12;
+/* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -183,7 +184,7 @@ int main(void)
 			Avancer();
 			HAL_Delay(1);
 		}
-					Reculer();
+		Reculer();
 
 		
 		/*Avancer(); //deplacement en bo
