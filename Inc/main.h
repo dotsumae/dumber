@@ -68,9 +68,17 @@
 #define Encodeur_gauche_A_Pin GPIO_PIN_8
 #define Encodeur_gauche_A_GPIO_Port GPIOA
 #define Encodeur_gauche_A_EXTI_IRQn EXTI9_5_IRQn
+#define Encodeur_gauche_B_Pin GPIO_PIN_9
+#define Encodeur_gauche_B_GPIO_Port GPIOA
+#define Encodeur_gauche_B_EXTI_IRQn EXTI9_5_IRQn
 #define Encodeur_droit_A_Pin GPIO_PIN_10
 #define Encodeur_droit_A_GPIO_Port GPIOA
 #define Encodeur_droit_A_EXTI_IRQn EXTI15_10_IRQn
+#define Encodeur_droit_B_Pin GPIO_PIN_11
+#define Encodeur_droit_B_GPIO_Port GPIOA
+#define Encodeur_droit_B_EXTI_IRQn EXTI15_10_IRQn
+#define Enable_encodeurs_Pin GPIO_PIN_12
+#define Enable_encodeurs_GPIO_Port GPIOA
 
 /* ########################## Assert Selection ############################## */
 /**
