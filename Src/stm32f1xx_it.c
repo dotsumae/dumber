@@ -34,9 +34,9 @@
 #include "stm32f1xx_hal.h"
 #include "stm32f1xx.h"
 #include "stm32f1xx_it.h"
+
 /* USER CODE BEGIN 0 */
 #include "deplacement.h"
-
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/

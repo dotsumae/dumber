@@ -42,7 +42,6 @@
 
 /* USER CODE BEGIN Includes */
 #include "deplacement.h"
-
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
