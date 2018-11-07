@@ -336,8 +336,8 @@
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103x6</Define>
-              <Undefine />
-              <IncludePath>../Inc;                   ../Drivers/STM32F1xx_HAL_Driver/Inc;                   ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;                   ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;                   ../Drivers/CMSIS/Include</IncludePath>
+              <Undefine></Undefine>
+              <IncludePath>../Inc;                    ../Drivers/STM32F1xx_HAL_Driver/Inc;                    ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;                    ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;                    ../Drivers/CMSIS/Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -392,6 +392,16 @@
           <GroupName>Application/User</GroupName>
           <Files>
             <File>
+              <FileName>deplacement.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\deplacement.c</FilePath>
+            </File>
+            <File>
+              <FileName>deplacement.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Src\deplacement.h</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
@@ -405,16 +415,6 @@
               <FileName>stm32f1xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/stm32f1xx_hal_msp.c</FilePath>
-            </File>
-            <File>
-              <FileName>deplacement.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\deplacement.c</FilePath>
-            </File>
-            <File>
-              <FileName>deplacement.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Src\deplacement.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -829,8 +829,8 @@
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103x6</Define>
-              <Undefine />
-              <IncludePath>../Inc;                   ../Drivers/STM32F1xx_HAL_Driver/Inc;                   ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;                   ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;                   ../Drivers/CMSIS/Include</IncludePath>
+              <Undefine></Undefine>
+              <IncludePath>../Inc;                    ../Drivers/STM32F1xx_HAL_Driver/Inc;                    ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;                    ../Drivers/CMSIS/Device/ST/STM32F1xx/Include;                    ../Drivers/CMSIS/Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -885,6 +885,16 @@
           <GroupName>Application/User</GroupName>
           <Files>
             <File>
+              <FileName>deplacement.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\deplacement.c</FilePath>
+            </File>
+            <File>
+              <FileName>deplacement.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Src\deplacement.h</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
@@ -898,16 +908,6 @@
               <FileName>stm32f1xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/stm32f1xx_hal_msp.c</FilePath>
-            </File>
-            <File>
-              <FileName>deplacement.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\deplacement.c</FilePath>
-            </File>
-            <File>
-              <FileName>deplacement.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Src\deplacement.h</FilePath>
             </File>
           </Files>
         </Group>
