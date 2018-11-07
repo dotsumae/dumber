@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/robot/Documents/dumber/Inc
+HeaderPath=C:/Users/fanny/Documents/Fanny/Université/Cours/4A/Périphériques/Projet/dumber/Inc
 HeaderFiles=stm32f1xx_it.h;stm32f1xx_hal_conf.h;main.h;
-SourcePath=C:/Users/robot/Documents/dumber/Src
+SourcePath=C:/Users/fanny/Documents/Fanny/Université/Cours/4A/Périphériques/Projet/dumber/Src
 SourceFiles=stm32f1xx_it.c;stm32f1xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]

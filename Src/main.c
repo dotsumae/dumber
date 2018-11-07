@@ -311,6 +311,9 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOB, LED_Red_Pin|LED_Verte_Pin|CMD_Gauche_A_Pin|CMD_Gauche_B_Pin 
                           |CMD_Droit_A_Pin|CMD_Droit_B_Pin, GPIO_PIN_RESET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
+
   /*Configure GPIO pins : LED_Red_Pin LED_Verte_Pin CMD_Gauche_A_Pin CMD_Gauche_B_Pin 
                            CMD_Droit_A_Pin CMD_Droit_B_Pin */
   GPIO_InitStruct.Pin = LED_Red_Pin|LED_Verte_Pin|CMD_Gauche_A_Pin|CMD_Gauche_B_Pin 
@@ -324,6 +327,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = Encodeur_gauche_A_Pin|Encodeur_droit_A_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA12 */
+  GPIO_InitStruct.Pin = GPIO_PIN_12;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
