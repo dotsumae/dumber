@@ -15,6 +15,7 @@ Pour la PWM : https://www.waveshare.com/wiki/STM32CubeMX_Tutorial_Series:_PWM
 
 # Infos utiles
 Pour les encodeurs: on peut utiliser directement le mode encodeur des timers. (combined channel: encoder mode dans CubeMx) (p328 du gros doc)
+Pour l'ADC : commenter la ligne "__HAL_AFIO_REMAP_SWJ_DISABLE();" en réél dans le fichier hal_msp
 
 # Trucs Nuls
 Quand on compile de CubeMX vers Keil, on perd la config du mode debug Simu
