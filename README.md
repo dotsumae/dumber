@@ -12,6 +12,7 @@ Ce projet est développé en C sur Keil (base de projet CubeMX).
 
 # Liens utiles 
 Pour la PWM : https://www.waveshare.com/wiki/STM32CubeMX_Tutorial_Series:_PWM
+Pour l'ADC : https://microtechnics.ru/en/stm32cube-stm-and-adc-analog-to-digital-converter/
 
 # Infos utiles
 Pour les encodeurs: on peut utiliser directement le mode encodeur des timers. (combined channel: encoder mode dans CubeMx) (p328 du gros doc)
