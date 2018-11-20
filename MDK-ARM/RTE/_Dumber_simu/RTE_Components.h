@@ -3,8 +3,8 @@
  * Auto generated Run-Time-Environment Component Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'Dumber' 
- * Target:  'Dumber simu' 
+ * Project: 'dumber' 
+ * Target:  'dumber_simu' 
  */
 
 #ifndef RTE_COMPONENTS_H

@@ -49,6 +49,36 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define PWM_Moteur_Droit_Pin GPIO_PIN_1
+#define PWM_Moteur_Droit_GPIO_Port GPIOA
+#define PWM_Moteur_Gauche_Pin GPIO_PIN_2
+#define PWM_Moteur_Gauche_GPIO_Port GPIOA
+#define Tension_Batterie_Pin GPIO_PIN_4
+#define Tension_Batterie_GPIO_Port GPIOA
+#define LED_Rouge_Pin GPIO_PIN_0
+#define LED_Rouge_GPIO_Port GPIOB
+#define LED_VERT_Pin GPIO_PIN_1
+#define LED_VERT_GPIO_Port GPIOB
+#define Chargeur_Jack_Pin GPIO_PIN_11
+#define Chargeur_Jack_GPIO_Port GPIOB
+#define Chargeur_Jack_EXTI_IRQn EXTI15_10_IRQn
+#define Direction_Moteur_Gauche_A_Pin GPIO_PIN_12
+#define Direction_Moteur_Gauche_A_GPIO_Port GPIOB
+#define Direction_Moteur_Gauche_B_Pin GPIO_PIN_13
+#define Direction_Moteur_Gauche_B_GPIO_Port GPIOB
+#define Direction_Moteur_Droit_A_Pin GPIO_PIN_14
+#define Direction_Moteur_Droit_A_GPIO_Port GPIOB
+#define Direction_Moteur_Droit_B_Pin GPIO_PIN_15
+#define Direction_Moteur_Droit_B_GPIO_Port GPIOB
+#define Encodeur_Gauche_A_Pin GPIO_PIN_8
+#define Encodeur_Gauche_A_GPIO_Port GPIOA
+#define Encodeur_Gauche_A_EXTI_IRQn EXTI9_5_IRQn
+#define Encodeur_Droit_A_Pin GPIO_PIN_10
+#define Encodeur_Droit_A_GPIO_Port GPIOA
+#define Encodeur_Droit_A_EXTI_IRQn EXTI15_10_IRQn
+#define Enable_Encodeurs_Pin GPIO_PIN_12
+#define Enable_Encodeurs_GPIO_Port GPIOA
+
 /* ########################## Assert Selection ############################## */
 /**
   * @brief Uncomment the line below to expanse the "assert_param" macro in the 
