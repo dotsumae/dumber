@@ -2,8 +2,42 @@
 #include "led.h"
 #include "stm32f1xx_hal.h"
 
-int TicksGauche = 0;
-int TicksDroite = 0;
+#define TICKS_ROTATION 70 //parametre pour les rotations
+int TicksGauche;
+int TicksDroite;
+
+
+void DeplacerDe(int destination) {
+	
+	int AncienEtat = LireEtat(TOUTES);
+	
+	if (destination > 0)
+	{
+		while(LireEtat(TOUTES) - AncienEtat < destination)
+		{
+			Avancer();
+		}	
+		
+	}
+	
+	
+	else if (destination < 0) 
+	{
+		while(LireEtat(TOUTES) - AncienEtat < - destination)
+		{
+			Reculer();
+		}	
+		
+	}
+	
+	else //destination = 0
+	{
+		Arret();
+	}
+}
+
+
+
 
 void ModifierTicksGauche(int increment) {
 	TicksGauche += increment;
@@ -12,8 +46,32 @@ void ModifierTicksDroite(int increment) {
 	TicksDroite += increment;
 }
 
-int LireEtat(void) {
-	return TicksGauche + TicksDroite;
+
+void ResetEtat(void) {
+	TicksGauche = 0;
+	TicksDroite = 0;
+}
+
+
+
+int LireEtat(enum roue selection_roue) {
+	
+	int resultat;
+	switch (selection_roue) {
+		
+		case GAUCHE : 
+			resultat = TicksGauche;
+			break;
+		case DROITE :
+			resultat = TicksDroite;
+			break;
+		case TOUTES : 
+			resultat = TicksGauche + TicksDroite;
+			break;
+	}
+	
+	return resultat;
+	
 }
 
 void Arret(void) {
@@ -62,6 +120,7 @@ void Reculer(void)
 
 void TournerG(void)
 {
+	int AncienTicksDroite = LireEtat(DROITE);
 		OnLEDOrange();
 		/* Faire tourner la roue gauche */
 		GPIOB->ODR |= (1<<12);
@@ -70,10 +129,15 @@ void TournerG(void)
 		/* Faire tourner la roue droite */
 		GPIOB->ODR |= (1<<14);
 		GPIOB->ODR &= ~(1<<15);
+	
+	while(LireEtat(DROITE) - AncienTicksDroite < TICKS_ROTATION) { HAL_Delay(10); }
+		Arret();
 }	
 
 void TournerD(void)
 {
+		int AncienTicksGauche = LireEtat(GAUCHE);
+
 		OnLEDOrange();	
 		/* Faire tourner la roue gauche */
 		GPIOB->ODR |= (1<<13);
@@ -82,7 +146,10 @@ void TournerD(void)
 		/* Faire tourner la roue droite */
 		GPIOB->ODR |= (1<<15);
 		GPIOB->ODR &= ~(1<<14);
+	
+	while(LireEtat(GAUCHE) - AncienTicksGauche < TICKS_ROTATION) { HAL_Delay(10); }
 
+	Arret();
 }
 
 

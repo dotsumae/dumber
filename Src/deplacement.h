@@ -1,10 +1,14 @@
+
 #ifndef DEPLACEMENT
 #define DEPLACEMENT
 
+enum roue {GAUCHE, DROITE, TOUTES};
 
+void DeplacerDe(int destination);
 void ModifierTicksGauche(int increment);
 void ModifierTicksDroite(int increment);
-int LireEtat(void);
+void ResetEtat(void);
+int LireEtat(enum roue selection_roue);
 void Arret(void);
 void Avancer(void);
 void Reculer(void);

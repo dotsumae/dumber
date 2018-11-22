@@ -70,7 +70,11 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
+volatile void DelaiMs(int duree) {
+	HAL_Delay(duree);
+}
 
+	
 /* USER CODE END 0 */
 
 /**
@@ -111,15 +115,18 @@ int main(void)
 	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_3);
 	OnLEDVerte();
 	
-
-
+	int DestinationX = 1000;
+	int DestinationY = -200;
+	int DelaiCommande = 500; //en ms
+	
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		HAL_Delay(10);
+		ResetEtat();
 
   /* USER CODE END WHILE */
 
@@ -138,14 +145,33 @@ int main(void)
 				
 				
 				/* Code moteur */
-				while(LireEtat() < 100)
-					{
-						Avancer();
-						HAL_Delay(1);
-					}
-					
-			Arret();
 				
+				Arret();
+				
+				DelaiMs(DelaiCommande);
+				DeplacerDe(DestinationX);
+				DelaiMs(DelaiCommande);
+				
+				
+
+				if (DestinationY > 0) {
+					TournerD();
+				}
+				else if (DestinationY < 0) {
+					TournerG();
+					DestinationY*= -1;
+				}
+				
+				
+				DelaiMs(DelaiCommande);
+
+				DeplacerDe(DestinationY);
+				
+
+				Arret();
+				HAL_Delay(3*DelaiCommande);
+
+
 			}	
 			else{
 				HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET);
